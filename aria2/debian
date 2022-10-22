@@ -56,7 +56,7 @@ View_Config() {
     [[ -z "${Download_dir}" ]] && Download_dir="未找到配置参数"
     [[ -z "${RPC_listen_port}" ]] && RPC_listen_port="未找到配置参数"
     [[ -z "${RPC_secret}" ]] && RPC_secret="未找到配置参数/无密钥"
-    if [[ -z "${IPV4}" || -z "${aria2_port}" ]]; then
+    if [[ -z "${IPV4}" || -z "${RPC_listen_port}" ]]; then
         AriaNg_URL="null"
     else
         AriaNg_API="/#!/settings/rpc/set/ws/${IPV4}/${aria2_port}/jsonrpc/$(echo -n ${aria2_passwd} | base64)"
