@@ -53,9 +53,9 @@ View_Config() {
 	[[ -z "${IPV6}" ]] && IPV6="IPv6 地址检测失败"
    [[ -z "${IPV4}" ]] && IPV4="IPv4 地址检测失败"
     [[ -z "${IPV6}" ]] && IPV6="IPv6 地址检测失败"
-    [[ -z "${aria2_dir}" ]] && aria2_dir="未找到配置参数"
-    [[ -z "${aria2_port}" ]] && aria2_port="未找到配置参数"
-    [[ -z "${aria2_passwd}" ]] && aria2_passwd="未找到配置参数/无密钥"
+    [[ -z "${Download_dir}" ]] && Download_dir="未找到配置参数"
+    [[ -z "${RPC_listen_port}" ]] && RPC_listen_port="未找到配置参数"
+    [[ -z "${RPC_secret}" ]] && RPC_secret="未找到配置参数/无密钥"
     if [[ -z "${IPV4}" || -z "${aria2_port}" ]]; then
         AriaNg_URL="null"
     else
