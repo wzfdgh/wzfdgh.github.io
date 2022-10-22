@@ -61,7 +61,7 @@ View_Config() {
     if [[ -z "${IPV4}" || -z "${RPC_listen_port}" ]]; then
         AriaNg_URL="null"
     else
-        AriaNg_API="/#!/settings/rpc/set/ws/${IPV4}/${aria2_port}/jsonrpc/$(echo -n ${aria2_passwd} | base64)"
+        AriaNg_API="/#!/settings/rpc/set/ws/${IPV4}/${RPC_listen_port}/jsonrpc/$(echo -n ${RPC_secret} | base64)"
         AriaNg_URL="http://ariang.mayswind.net/latest${AriaNg_API}"
     fi
 	clear
