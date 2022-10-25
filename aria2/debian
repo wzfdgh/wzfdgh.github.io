@@ -44,10 +44,10 @@ Read_config() {
 View_Config() {
 	Read_config
     IPV4=$(
-        curl 4.ipw.cn
+        curl -s 4.ipw.cn
     )
     IPV6=$(
-        curl 6.ipw.cn
+        curl -s 6.ipw.cn
     )
 	[[ -z "${IPV4}" ]] && IPV4="IPv4 地址检测失败"
 	[[ -z "${IPV6}" ]] && IPV6="IPv6 地址检测失败"
